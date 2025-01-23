@@ -1,4 +1,10 @@
-# Windows server
+# Windows server 2022
+
+## Liens utiles : 
+
+- https://www.youtube.com/watch?v=CJgxCXj1G7Q
+- https://www.microsoft.com/fr-fr/evalcenter/evaluate-windows-server-2022
+
 
 ## Pré-requis
 - 1 machine virtuelle (DC2022)
