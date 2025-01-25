@@ -176,9 +176,10 @@ Par défaut. Le lecteur Z est sélectionné et il apparait dans Ce PC.
 - Promouvoir ce serveur en controleur de domaine
 - Cliquer sur Ajouter une forêt
 - Saisir epreuve.lan
+- Cliquer sur Suivant
 - Suivre l'assistance :
-    - Le nom netbios va apparaître
     - Il faut avoir le même niveau fonctionnel de la forêt. (ex. niveau fonctionnel de la forêt : Windows 2016 et niveau fonctionnel du domaine : Windows2016). Ceci permet de faire **l'approbation de deux serveurs de sites différents**
+    - Le nom netbios va apparaître
     - Saisir le mot de passe et confirmer le mot de passe
 
 Quand on aura cliqué sur Terminer, l'installation va débuter.
@@ -195,21 +196,28 @@ cliquer sur redémarrer
 
 ## Configuration du DNS
 
-### Création de la zone inversée
-
+### Vérification que la zone directe est bien créée
 
 Aller dans Outils > DNS > Cliquer sur DC2022 (nom du serveur)
 
 Cliquer sur fleche déscendante
 
-Cliquer sur la premiere (Zones de recherche directe)
+Cliquer sur Zones de recherche directe
 
-on voit Epreuve.lan
+On voit Epreuve.lan
 
+### Création de la zone inversée
 
-Dans la Zone inversée, il y a rien
+Aller dans Outils > DNS > Cliquer sur DC2022 (nom du serveur)
+
+Cliquer sur fleche déscendante
+
+Cliquer sur Zones de recherche inversée
+
 On fait clic droit sur Zones de recherche inversée > Nouvelle zone
+
 Faire Suivant partout
+
 ID réseau : siaisir les trois premiers octets : 172.16.10
 
 Suivant
@@ -218,6 +226,8 @@ Terminer
 
 
 ### Mise à jour de l'enregistrement de pointeur (PTR)
+
+L'enregistrement pointeur permet de mapper une adresse ip à un nom de domaine
 
 Dans la colonne de gauche :
 - cliquer sur la flèche à coté du nom de la machine
